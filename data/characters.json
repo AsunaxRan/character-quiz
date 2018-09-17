@@ -112,5 +112,527 @@
 		"Sarutobi Hizuen", 
 		"18.png",
 		["Son Goku", "Son Gohan", "Son Goten"]
+	],
+	[
+		19, 
+		"Senju Tobirama", 
+		"19.png",
+		["Zabura", "Naruto Uzumaki", "Danzo Shimura"]
+	],
+	[
+		20, 
+		"Senju Hashirama", 
+		"20.png",
+		["Uchiha Sasuke", "Gray Fullbuster", "Son Goku"]
+	],
+	[
+		21, 
+		"Jiraiya", 
+		"21.png",
+		["Taki", "Takeshi", "Uchiha Obito"]
+	],
+	[
+		22, 
+		"Orochimaru", 
+		"22.png",
+		["Mitsuki", "Uchiha Sasuke", "Yakushi Kabuto"]
+	],
+	[
+		23, 
+		"Uchiha Obito", 
+		"23.png",
+		["Zetsu", "Uchiha Madara", "Yahiko"]
+	],
+	[
+		24, 
+		"Rin Nohara", 
+		"24.png",
+		["Sakura Haruno", "Serena", "Kasumi"]
+	],
+	[
+		25, 
+		"Uchiha Madara", 
+		"25.png",
+		["Uchiha Obito", "Senju Hashirama", "Senju Tobirama"]
+	],
+	[
+		26, 
+		"Naruto Uzumaki", 
+		"26.png",
+		["Kiba Inuzuka", "Rock Lee", "Boruto Uzumaki"]
+	],
+	[
+		27, 
+		"Killer Bee", 
+		"27.png",
+		["Sasuke Uchiha", "Son Gohan", "Roronoa Zoro"]
+	],
+	[
+		28, 
+		"Mei Terumi", 
+		"28.png",
+		["Hishiro", "Ran Mori", "Uzumaki Kushina"]
+	],
+	[
+		29, 
+		"Onoki", 
+		"29.png",
+		["Muu", "Sarutobi Hiruzen", "Sarutobi Konohamaru"]
+	],
+	[
+		30, 
+		"Gaara", 
+		"30.png",
+		["Rock Lee", "Neji Hyuga", "Naruto Uzumaki"]
+	],
+	[
+		31, 
+		"Kisame", 
+		"31.png",
+		["Killer Bee", "Son Gohan", "Zabura"]
+	],
+	[
+		32, 
+		"Deidara", 
+		"32.png",
+		["Naki", "Mimasaka Subaru", "Hidan"]
+	],
+	[
+		33, 
+		"Sasori", 
+		"33.png",
+		["Orochimaru", "Mimasaka Subaru", "Yukihira Soma"]
+	],
+	[
+		34, 
+		"Hidan", 
+		"34.png",
+		["Uchiha Itachi", "Hattori Heiji", "Sanji"]
+	],
+	[
+		35, 
+		"Kakuzu", 
+		"35.png",
+		["Broly", "Uzumaki Kushina", "Nami"]
+	],
+	[
+		36, 
+		"Zetsu", 
+		"36.png",
+		["Uchiha Obito", "Tonton", "Sakata Gintoki"]
+	],
+	[
+		37, 
+		"Kabuto", 
+		"37.png",
+		["Orochimaru", "Uchiha Sasuke", "Mitsuki"]
+	],
+	[
+		38, 
+		"Boruto Uzumaki", 
+		"38.png",
+		["Rock Lee", "Uzumaki Naruto", "Aburame Shino"]
+	],
+	[
+		39, 
+		"Sarada Uchiha", 
+		"39.png",
+		["Karin", "Sakura Haruno", "Sumire"]
+	],
+	[
+		40, 
+		"Mitsuki", 
+		"40.png",
+		["Boruto Uzumaki", "Gaara", "Naruto Uzumaki"]
+	],
+	[
+		41, 
+		"Shino Aburame", 
+		"41.png",
+		["Kiba Inuzuka", "Gintoki", "Satoshi"]
+	],
+	[
+		42, 
+		"Kiba Inuzuka ", 
+		"42.png",
+		["Kakashi Hatake", "Uchiha Sasuke", "Satoshi"]
+	],
+	[
+		43, 
+		"Monkey D Luffy", 
+		"43.png",
+		["Brook", "Saitama", "Ai Haibara"]
+	],
+	[
+		44, 
+		"Roronoa Zoro", 
+		"44.png",
+		["Kirito", "Killer Bee", "Kyros"]
+	],
+	[
+		45, 
+		"Sanji Vinsmoke", 
+		"45.png",
+		["Yukihira Soma", "Takumi Aldini", "Kimi"]
+	],
+	[
+		46, 
+		"Nami", 
+		"46.png",
+		["Bulma", "Baby 5", "Launch"]
+	],
+	[
+		47, 
+		"Nico Robin", 
+		"47.png",
+		["Miyamizu Mitsuha", "Tadokoro Megumi", "Arato Hisako"]
+	],
+	[
+		48, 
+		"Usopp", 
+		"48.png",
+		["Takao", "Apoo", "Chopper"]
+	],
+	[
+		49, 
+		"Franky", 
+		"49.png",
+		["Baby 5", "Bulma", "Launch"]
+	],
+	[
+		50, 
+		"Brook", 
+		"50.png",
+		["Roronoa Zoro", "Eiji", "Kirito"]
+	],
+	[
+		51, 
+		"Chopper", 
+		"51.png",
+		["Jesus Burgess", "Mimasaka Subaru", "Jason"]
+	],
+	[
+		52, 
+		"Trafalgar Law", 
+		"52.png",
+		["Saiba Jouichirou", "Tsukasa Eishi", "Jean"]
+	],
+	[
+		53, 
+		"Eustass Kid", 
+		"53.png",
+		["Levi", "Baby 5", "Monkey D.Luffy"]
+	],
+	[
+		54, 
+		"Capone Bege", 
+		"54.png",
+		["Mimasaka Subaru", "Sarutobi Asuma", "Chitoge"]
+	],
+	[
+		55, 
+		"Killer", 
+		"55.png",
+		["Law", "Kirito", "Brook"]
+	],
+	[
+		56, 
+		"Basil Hawkins", 
+		"56.png",
+		["Deidara", "Shiratori", "Kogoro Mori"]
+	],
+	[
+		57, 
+		"Urouge", 
+		"57.png",
+		["X Drake", "Shubarugo", "Subaru"]
+	],
+	[
+		58, 
+		"Jewel Bonney", 
+		"58.png",
+		["Ran Mori", "Nami", "Hishiro Chizuru"]
+	],
+	[
+		59, 
+		"X Drake", 
+		"59.png",
+		["Uchiha Sasuke", "Roronoa Zoro", "Killer Bee"]
+	],
+	[
+		60, 
+		"Apoo", 
+		"60.png",
+		["Uroge", "Smiler", "Killer"]
+	],
+	[
+		61, 
+		"Marshall D.Teach", 
+		"61.png",
+		["Ai Haibara", "Monkey D.Luffy", "Monkey D.Dragon"]
+	],
+	[
+		62, 
+		"Edward Newgate", 
+		"62.png",
+		["Roronoa Zozo", "Monkey D.Garp", "Hatake Sakumo"]
+	],
+	[
+		63, 
+		"Charlotte Linlin", 
+		"63.png",
+		["Totoro", "Charlotte Lola", "Charlotte Lili"]
+	],
+	[
+		64, 
+		"Shanks", 
+		"64.png",
+		["Gol D. Roger", "Dracule Mihawk", "Uchiha Sasuke"]
+	],
+	[
+		65, 
+		"Kaido", 
+		"65.png",
+		["Zukon", "RyokuGyu", "Sengoku"]
+	],
+	[
+		66, 
+		"Donquixote Doflamingo", 
+		"66.png",
+		["Crocodile", "Vista", "Bon Clay"]
+	],
+	[
+		67, 
+		"Jinbei", 
+		"67.png",
+		["Tobirama Senju", "Sabo", "Orochimaru"]
+	],
+	[
+		68, 
+		"Gecko Moria", 
+		"68.png",
+		["Crocodile", "Uchiha Shin", "Doraemon"]
+	],
+	[
+		69, 
+		"Boa Hancock", 
+		"69.png",
+		["Charlotte Linlin", "Leafa", "Suguha"]
+	],
+	[
+		70, 
+		"Buggy", 
+		"70.png",
+		["Sarutobi Konohamaru", "Crocodile", "Juuzou Suzuya"]
+	],
+	[
+		71, 
+		"Dracule Mihawk", 
+		"71.png",
+		["Juuzou Suzuya", "Roronoa Zozo", "Ichigo"]
+	],
+	[
+		72, 
+		"Akainu", 
+		"72.png",
+		["Portgas D. Ace", "Son", "Kisame"]
+	],
+	[
+		73, 
+		"Aokiji", 
+		"73.png",
+		["Trafalgar Law", "Tobirama Senju", "Gaara"]
+	],
+	[
+		74, 
+		"Kizaru", 
+		"74.png",
+		["Roronoa Zozo", "Vista", "Hayate"]
+	],
+	[
+		75, 
+		"Fujitora", 
+		"75.png",
+		["Roronoa Zoro", "Uchiha Sasuke", "Cavendish"]
+	],
+	[
+		76, 
+		"Smoker", 
+		"76.png",
+		["Dracule Mihawk", "Cavendish", "Kirito"]
+	],
+	[
+		77, 
+		"Marco", 
+		"77.png",
+		["Tsukasa Eishi", "Smoker", "Nakiri Azami"]
+	],
+	[
+		78, 
+		"Jozu", 
+		"78.png",
+		["Jiro", "Pica", "Jesus Burgess"]
+	],
+	[
+		79, 
+		"Emporio Ivankov", 
+		"79.png",
+		["Caesar Clown", "Son", "Jinbei"]
+	],
+	[
+		80, 
+		"Vista", 
+		"80.png",
+		["Son", "Caesar Clown", "Emporio Ivankov"]
+	],
+	[
+		81, 
+		"Portgas D. Ace", 
+		"81.png",
+		["Death Gun", "Upsopp", "Sabo"]
+	],
+	[
+		82, 
+		"Enel", 
+		"82.png",
+		["Upsopp", "Enlel", "Monkey D.Luffy"]
+	],
+	[
+		83, 
+		"Don Chinjao", 
+		"83.png",
+		["Madara Uchiha", "Jiraiya", "Monkey D.Garp"]
+	],
+	[
+		84, 
+		"Bartolomeo", 
+		"84.png",
+		["Cavendish", "Kuma", "Naruto Uzumaki"]
+	],
+	[
+		85, 
+		"Cavendish", 
+		"85.png",
+		["Uchiha Sasuke", "Gintoki", "Zukon"]
+	],
+	[
+		86, 
+		"Baby 5", 
+		"86.png",
+		["Launch", "Buggy", "Cavendish"]
+	],
+	[
+		87, 
+		"Senor Pink", 
+		"87.png",
+		["Senior Pink", "Saviola", "Sennor Pink"]
+	],
+	[
+		88, 
+		"Vinsmoke Reiju", 
+		"88.png",
+		["Boa Hancock", "Kuroyukihime", "Arita"]
+	],
+	[
+		89, 
+		"Caesar Clown", 
+		"89.png",
+		["Kakuzu", "Gaara", "Crocodile"]
+	],
+	[
+		90, 
+		"Donquixote Rosinante", 
+		"90.png",
+		["Mori Kogoro", "Gin", "Vodka"]
+	],
+	[
+		91, 
+		"Rebecca", 
+		"91.png",
+		["Asuna Yuuki", "Yuuki Konno", "Nami"]
+	],
+	[
+		92, 
+		"Kyros", 
+		"92.png",
+		["Hayate", "Vista", "Kaiz"]
+	],
+	[
+		93, 
+		"Sengoku", 
+		"93.png",
+		["Natsu Dragneel", "Laxus Dreyar", "Lauxus"]
+	],
+	[
+		94, 
+		"Monkey D. Garp", 
+		"94.png",
+		["Monkey D.Luffy", "Rayleigh", "No16"]
+	],
+	[
+		95, 
+		"Sabo", 
+		"95.png",
+		["Hinata Hyuga", "Portgas D. Ace", "Marshall D. Teach"]
+	],
+	[
+		96, 
+		"Miyamizu Mitsuha", 
+		"96.png",
+		["Kazuha Toyama", "Lucy Heartfilia", "Touka Kirishima"]
+	],
+	[
+		97, 
+		"Kuroko Tetsuya", 
+		"97.png",
+		["Kise Ryouta", "Junpei Hyuga", "Shun Izuki"]
+	],
+	[
+		98, 
+		"Ezra Scarlet", 
+		"98.png",
+		["Hayate", "Yugao", "Sherria"]
+	],
+	[
+		99, 
+		"Ai Haibara", 
+		"99.png",
+		["Ayumi", "Shizuka Minamoto", "Mizamiyu Yotsuha"]
+	],
+	[
+		100, 
+		"Kise Ryouta", 
+		"100.png",
+		["Kuroko Tetsuya", "Takao", "Akashi Seijuro"]
+	],
+	[
+		101, 
+		"Asuna Yuuki", 
+		"101.png",
+		["Nakiri Erina", "Ezra Scarlet", "Azusa"]
+	],
+	[
+		102, 
+		"Erina Nakiri", 
+		"102.png",
+		["Asuna Yuuki", "Yukiko", "Boa Hancock"]
+	],
+	[
+		103, 
+		"Hatake Kakashi", 
+		"103.png",
+		["Uchiha Sasuke", "Might Guy", "Yamato"]
+	],
+	[
+		104, 
+		"Vegeta", 
+		"104.png",
+		["Son Goku", "Son Gohan", "Trunks"]
+	],
+	[
+		105, 
+		"Uchiha Sasuke", 
+		"105.png",
+		["Uchiha Obito", "Hatake Kakashi", "Uchiha Shisui"]
 	]
 ]
