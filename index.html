@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/x-icon" href="imgs/general/favicon.png">
+	<title>Character Quiz</title>
+
+	<link rel="stylesheet" href="vendor/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="vendor/jquery-3.3.1.min.js"></script>
+	<script src="js/script.js"></script>
+	<script type="text/javascript">
+		$(window).on('load', function() {
+			$('.preloader').fadeOut('fast');
+		});
+	</script>
+</head>
+<body>
+	
+	<div class="preloader">
+		<div class="spinner">
+			<div class="rect1"></div>
+			<div class="rect2"></div>
+			<div class="rect3"></div>
+			<div class="rect4"></div>
+			<div class="rect5"></div>
+		</div>
+	</div>
+
+	<!-- music -->
+	<audio id="music-bg" src="audios/bg.mp3" preload autoplay loop></audio>
+	<audio id="music-correct" src="audios/correct.wav" preload></audio>
+	<audio id="music-incorrect" src="audios/incorrect.wav" preload></audio>
+	<audio id="music-end" src="audios/end.wav" preload></audio>
+	<audio id="music-gameover" src="audios/gameover.wav" preload></audio>
+	<audio id="music-miss" src="audios/miss.mp3" preload></audio>
+
+	<div class="wrapper">
+		<div class="content">
+			<div class="screen open" id="begin">
+				<div class="header">
+					<div class="border-top">
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+				<div class="game-title">
+					<div class="img-holder">
+						<img class="img-responsive" src="imgs/general/CharQuiz.png" alt="Character Quiz Title">
+					</div>
+				</div>
+				<div class="game-logo">
+					<div class="img-holder">
+						<img class="img-responsive" src="imgs/general/who.png" alt="Character Quiz Logo">
+					</div>
+				</div>
+				<div class="game-play">
+					<button class="btn" id="play" onclick="play()">
+						<i class="fa fa-location-arrow fa-5x" aria-hidden="true"></i>
+					</button>
+				</div>
+			</div> <!-- screen-begin -->
+
+			<div class="screen" id="in-process">
+				<div class="header">
+					<section id="progress-bar">
+						<div id="progress" style="width: 100%;"></div>
+					</section>
+				</div>
+				<div class="in-process-top">
+					<div class="total-point font-movie">
+						<i class="fa fa-trophy" aria-hidden="true"></i>
+						<span id="total-point">0</span>
+					</div>
+					<button class="next-question" onclick="nextQuiz()">
+						<i class="fa fa-arrow-right" aria-hidden="true"></i>
+					</button>
+				</div>
+				<div class="bonus">
+					<span>x</span>
+					<span id="bonus-combo">1</span>
+				</div>
+				<div class="quiz-index">
+					<span id="current-quiz">1</span> / <span id="total-quiz">15</span>
+				</div>
+				<div class="quiz-wrap"></div>
+			</div> <!-- screen-in-process -->
+
+			<div class="screen" id="end">
+				<div class="header">
+					<div class="border-top">
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+				<div class="end-point color-orange">
+					<i class="fa fa-trophy fa-fw" aria-hidden="true"></i>
+					<span id="end-point">0</span>
+				</div>
+				<div class="end-img">
+					<div class="img-holder">
+						<img class="img-responsiveY" src="imgs/general/thatis.png" alt="That is ...">
+					</div>
+				</div>
+				<div class="end-statistic">
+					<div class="statistic-shape clearfix">
+						<div id="shape-correct" class="bg-teal" style="width: 60%;"></div>
+						<div id="shape-incorrect" class="bg-red" style="width: 40%;"></div>
+					</div>
+					<div class="statistic-number clearfix">
+						<span class="pull-left color-teal" id="number-correct">8</span>
+						<span class="pull-right color-red" id="number-incorrect">7</span>
+					</div>
+				</div>
+				<div class="end-re-play">
+					<button class="btn" id="re-play" onclick="rePlay()" title="Re-play">
+						<i class="fa fa-undo fa-5x" aria-hidden="true"></i>
+					</button>
+				</div>
+			</div> <!-- screen-end -->
+		</div>
+
+		<footer class="footer">
+			<p class="text-center font-ice">301 EMPIRE</p>
+		</footer>
+	</div>
+</body>
+</html>

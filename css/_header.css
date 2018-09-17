@@ -1,0 +1,35 @@
+.header {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	max-width: 414px;
+}
+
+.header .border-top {
+	height: 6px;
+	display: flex;
+	flex: 1;
+}
+.header .border-top div {
+	height: 100%;
+	width: 100%;
+}
+.header .border-top div:first-child {
+	background-color: var(--red);
+}
+.header .border-top div:nth-child(2) {
+	background-color: var(--orange);
+}
+.header .border-top div:last-child {
+	background-color: var(--teal);
+}
+
+#progress-bar {
+	height: 6px;
+	background-color: var(--rteal);
+}
+#progress {
+	height: 100%;
+	background-color: var(--teal);
+	transition: 0.5s width linear;
+}

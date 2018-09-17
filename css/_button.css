@@ -1,0 +1,9 @@
+.btn {
+	cursor: pointer;
+	display: inline-block;
+	border: none;
+	outline: none;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
