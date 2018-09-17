@@ -10,10 +10,11 @@
 	<link rel="stylesheet" href="css/main.min.css">
 
 	<script src="vendor/jquery-3.3.1.min.js"></script>
-	<script src="js/script.js"></script>
+	<script src="js/script.min.js"></script>
 	<script type="text/javascript">
 		$(window).on('load', function() {
 			$('.preloader').fadeOut('fast');
+			$('#music-bg')[0].play();
 		});
 	</script>
 </head>
@@ -30,7 +31,7 @@
 	</div>
 
 	<!-- music -->
-	<audio id="music-bg" src="audios/bg.mp3" preload autoplay loop></audio>
+	<audio id="music-bg" src="audios/bg.mp3" preload loop></audio>
 	<audio id="music-correct" src="audios/correct.wav" preload></audio>
 	<audio id="music-incorrect" src="audios/incorrect.wav" preload></audio>
 	<audio id="music-end" src="audios/end.wav" preload></audio>
