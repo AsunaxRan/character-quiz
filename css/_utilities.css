@@ -1,6 +1,7 @@
 .text-center { text-align: center; }
 .text-left { text-align: left; }
 .text-right { text-align: right; }
+.letter-spacing { letter-spacing: 2px; }
 
 .font-bold { font-weight: bold; }
 
@@ -32,6 +33,8 @@
 	display: inline-block;
 	height: 100%;
 	width: auto;
+	max-width: 100%;
+	object-fit: contain;
 }
 .img-holder { display: inline-block; }
 

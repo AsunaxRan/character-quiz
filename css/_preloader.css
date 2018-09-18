@@ -20,7 +20,7 @@
 }
 
 .spinner > div {
-	background-color: var(--blue);
+	background-color: var(--teal);
 	height: 100%;
 	width: 6px;
 	display: inline-block;

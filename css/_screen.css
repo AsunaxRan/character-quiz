@@ -30,8 +30,7 @@
 	display: inline-block;
 	width: 100%;
 	padding: 1% 0;
-  background-color: var(--teal);
-/* 	font-size: 4em; */
+  	background-color: var(--teal);
 	color: var(--white);
 	animation: heartbeat 1s infinite ease;
 }
@@ -49,11 +48,9 @@
 .total-point {
 	color: var(--orange);
 	font-size: 4em;
-	display: flex;
 }
 .total-point span {
 	font-weight: bold;
-	margin-left: 5px;
 }
 
 .next-question {
@@ -71,6 +68,7 @@
 	top:  30%;
 	left: 5%;
 	opacity: 0;
+	z-index: 10;
 }
 .bonus span {
 	color: var(--teal);
@@ -87,6 +85,7 @@
 	top: 15%;
 	width: 100%;
 	text-align: center;
+	z-index: 5;
 }
 .hidden-character .img-holder {
 	height: 50vh;
@@ -155,9 +154,6 @@
 	text-align: center;
 	font-family: var(--movie-title);
 	font-weight: bold;
-	display: flex;
-	justify-self: baseline;
-	justify-content: center;
 }
 
 .end-img {
@@ -181,6 +177,7 @@
 	font-weight: bold;
 }
 .statistic-shape {
+	margin-bottom: 5px;
 }
 .statistic-shape div {
 	float: left;

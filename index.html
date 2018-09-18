@@ -11,12 +11,6 @@
 
 	<script src="vendor/jquery-3.3.1.min.js"></script>
 	<script src="js/script.min.js"></script>
-	<script type="text/javascript">
-		$(window).on('load', function() {
-			$('.preloader').fadeOut('fast');
-			document.getElementById('music-bg').play();
-		});
-	</script>
 </head>
 <body>
 	
@@ -74,7 +68,7 @@
 				<div class="in-process-top">
 					<div class="total-point font-movie">
 						<i class="fa fa-trophy" aria-hidden="true"></i>
-						<span id="total-point">0</span>
+						<span class="letter-spacing" id="total-point">0</span>
 					</div>
 					<button class="next-question" onclick="nextQuiz()">
 						<i class="fa fa-arrow-right" aria-hidden="true"></i>
@@ -99,8 +93,8 @@
 					</div>
 				</div>
 				<div class="end-point color-orange">
-					<i class="fa fa-trophy fa-fw" aria-hidden="true"></i>
-					<span id="end-point">0</span>
+					<i class="fa fa-trophy" aria-hidden="true"></i>
+					<span class="letter-spacing" id="end-point">0</span>
 				</div>
 				<div class="end-img">
 					<div class="img-holder">
@@ -113,12 +107,12 @@
 						<div id="shape-incorrect" class="bg-red" style="width: 40%;"></div>
 					</div>
 					<div class="statistic-number clearfix">
-						<span class="pull-left color-teal" id="number-correct">8</span>
-						<span class="pull-right color-red" id="number-incorrect">7</span>
+						<span class="pull-left color-teal letter-spacing" id="number-correct">8</span>
+						<span class="pull-right color-red letter-spacing" id="number-incorrect">7</span>
 					</div>
 				</div>
 				<div class="end-re-play">
-					<button class="btn" id="re-play" onclick="rePlay()" title="Re-play">
+					<button class="btn" id="re-play" onclick="openScreen('#begin')" title="Re-play">
 						<i class="fa fa-undo fa-5x" aria-hidden="true"></i>
 					</button>
 				</div>

@@ -11,6 +11,10 @@ var quiz_correct_count;
 var combo 					= 0;
 var current_quiz_item;
 
+$(window).on('load', function() {
+	$('.preloader').fadeOut('fast');
+});
+
 function reset() {
 	current_quiz = 0;
 	total_point = 0;
@@ -102,6 +106,7 @@ function timing() {
 	    	clearInterval(timer);
 	    	$(current_quiz_item).find('.answer').css('pointer-events', 'none');
 	    	$('#music-miss')[0].play();
+	    	combo = 0;
 	    }
 	}, 500);
 }
@@ -116,6 +121,8 @@ function play() {
 	clean();
 	makeQuiz();
 	openScreen('#in-process');
+	$('#music-bg')[0].volumn = 0.7;
+	$('#music-bg')[0].play();
 	nextQuiz();
 }
 
@@ -155,7 +162,6 @@ function check(answer) {
 }
 
 function nextQuiz() {
-	$('#music-bg')[0].volumn = 0.7;
 	$('.bonus').removeClass('show');
 	if (current_quiz == total_quiz) {
 		endQuiz();
@@ -186,12 +192,6 @@ function endQuiz() {
 	var shape_correct = (quiz_correct_count / total_quiz) * 100;
 	$('#shape-correct').css('width', shape_correct + '%');
 	$('#shape-incorrect').css('width', (100 - shape_correct) + '%');
-}
-
-function rePlay() {
-	openScreen('#begin');
-	$('#music-bg')[0].load();
-	$('#music-bg')[0].play();
 }
 
 
