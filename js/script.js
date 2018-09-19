@@ -102,6 +102,7 @@ function timing() {
 	timer = setInterval(function(){
 		time_remaining -= 0.5;
 	    $('#progress').css('width', time_remaining * 20 + "%");
+
 	    if (time_remaining == 0) {
 	    	clearInterval(timer);
 	    	$(current_quiz_item).find('.answer').css('pointer-events', 'none');
@@ -121,20 +122,20 @@ function play() {
 	clean();
 	makeQuiz();
 	openScreen('#in-process');
-	$('#music-bg')[0].volumn = 0.7;
+	$('#music-bg')[0].volumn = 0.6;
 	$('#music-bg')[0].play();
 	nextQuiz();
 }
 
-function counter(current_point, new_point) {
+function counter(current_point, new_point, target, speed) {
 	$({ Counter: current_point }).animate({ Counter: new_point }, {
-		duration: 500,
+		duration: speed,
 		easing: 'swing',
 		step: function() {
-			$('#total-point').text(Math.ceil(this.Counter));
+			$(target).text(Math.ceil(this.Counter));
 		},
 		complete: function() {
-			$('#total-point').text(new_point);
+			$(target).text(new_point);
 		}
 	});
 }
@@ -143,6 +144,7 @@ function check(answer) {
 	var data_correct = $(answer).data('correct');
 	$(current_quiz_item).find('.answer').css('pointer-events', 'none');
 	clearInterval(timer);
+
 	if (data_correct) {
 		$(answer).addClass('correct');
 		$(current_quiz_item).find('.hidden-character-item').addClass('show');
@@ -152,7 +154,7 @@ function check(answer) {
 		$('#bonus-combo').text(combo);
 		var current_point = total_point;
 		total_point += time_remaining * 100 * combo;
-		counter(current_point, total_point);
+		counter(current_point, total_point, '#total-point', 500);
 		$('#music-correct')[0].play();
 	} else {
 		$(answer).addClass('incorrect');
@@ -163,6 +165,8 @@ function check(answer) {
 
 function nextQuiz() {
 	$('.bonus').removeClass('show');
+	clearInterval(timer);
+
 	if (current_quiz == total_quiz) {
 		endQuiz();
 	} else {
@@ -171,18 +175,18 @@ function nextQuiz() {
 		$('.quiz-item').removeClass('show');
 		$(current_quiz_item).addClass('show');
 		$('#current-quiz').text(current_quiz);
-		clearInterval(timer);
 		timing();
 	}
 }
 
 function endQuiz() {
 	openScreen('#end');
-	$('#end-point').text(total_point);
+	counter(0, total_point, '#end-point', 1000);
 	$('#number-correct').text(quiz_correct_count);
 	$('#number-incorrect').text(total_quiz - quiz_correct_count);
 
 	$('#music-bg')[0].pause();
+
 	if (quiz_correct_count > total_quiz / 2) {
 		$('#music-end')[0].play();
 	} else {

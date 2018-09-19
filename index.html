@@ -7,10 +7,10 @@
 	<title>Character Quiz</title>
 
 	<link rel="stylesheet" href="vendor/font-awesome-4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" href="css/main.css">
 
 	<script src="vendor/jquery-3.3.1.min.js"></script>
-	<script src="js/script.min.js"></script>
+	<script src="js/script.js"></script>
 </head>
 <body>
 	
@@ -65,12 +65,12 @@
 						<div id="progress" style="width: 100%;"></div>
 					</section>
 				</div>
-				<div class="in-process-top">
-					<div class="total-point font-movie">
+				<div class="in-process-top clearfix">
+					<div class="pull-left total-point">
 						<i class="fa fa-trophy" aria-hidden="true"></i>
 						<span class="letter-spacing" id="total-point">0</span>
 					</div>
-					<button class="next-question" onclick="nextQuiz()">
+					<button class="pull-right btn next-question" onclick="nextQuiz()">
 						<i class="fa fa-arrow-right" aria-hidden="true"></i>
 					</button>
 				</div>

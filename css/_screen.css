@@ -42,15 +42,19 @@
 .in-process-top {
 	margin-top: 5%;
 	padding: 0 5%;
-	display: flex;
-	justify-content: space-between;
 }
 .total-point {
 	color: var(--orange);
-	font-size: 4em;
+	line-height: 1.5em;
 }
-.total-point span {
+.total-point i {
+	font-size: 3.5em;
+}
+#total-point {
+	font-size: 4em;
 	font-weight: bold;
+	font-family: var(--movie-title);
+	vertical-align: sub;
 }
 
 .next-question {
@@ -150,10 +154,16 @@
 .end-point {
 	padding: 5%;
 	margin-top: 5%;
-	font-size: 5em;
 	text-align: center;
 	font-family: var(--movie-title);
 	font-weight: bold;
+}
+.end-point i {
+	font-size: 4.5em;
+}
+.end-point span {
+	font-size: 5em;
+	vertical-align: sub;
 }
 
 .end-img {
