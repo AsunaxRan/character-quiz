@@ -98,8 +98,14 @@
 	filter: contrast(0) sepia(100%) hue-rotate(116deg) brightness(0.4) saturate(0.28);
 	transition: 0.3s filter ease;
 }
+.hidden-character-item.mirror {
+	transform: rotateY(180deg);
+}
 .hidden-character-item.show {
-	filter: none;
+	filter: none !important;
+}
+.hidden-character-item.magic {
+	filter: blur(5px);
 }
 
 .quiz-index {
@@ -147,6 +153,33 @@
 .answer.correct {
 	background-color: var(--teal);
 	color: var(--white);
+}
+
+.tools {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	right: 5%;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 100;
+}
+.tool {
+	display: inline-block;
+	color: var(--teal);
+	margin-top: 5px;
+	margin-bottom: 5px;
+	cursor: pointer;
+	text-shadow: 1px 1px 3px var(--teal);
+}
+.tool.active {
+	animation: tada 2s linear infinite;
+	pointer-events: none;
+}
+.tool.disabled {
+	text-shadow: 1px 1px 3px var(--black);
+    color: var(--grey);
+    pointer-events: none;
 }
 
 /*-----------------| Screen#end |-----------------*/

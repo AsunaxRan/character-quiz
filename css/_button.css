@@ -7,3 +7,7 @@
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
+.btn::-moz-focus-inner, .btn:-moz-focus-inner, .btn:focus {
+	outline: none !important;
+	border: 0 !important;
+}

@@ -8,9 +8,6 @@
 
 	<link rel="stylesheet" href="vendor/font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/main.min.css">
-
-	<script src="vendor/jquery-3.3.1.min.js"></script>
-	<script src="js/script.min.js"></script>
 </head>
 <body>
 	
@@ -78,6 +75,17 @@
 					<span>x</span>
 					<span id="bonus-combo">1</span>
 				</div>
+				<div class="tools pull-right">
+					<span class="tool" id="item-star" onclick="activeTool(this)" data-item="star">
+						<i class="fa fa-star fa-2x"></i>
+					</span>
+					<span class="tool" id="item-magic" onclick="activeTool(this)" data-item="magic">
+						<i class="fa fa-magic fa-2x"></i>
+					</span>
+					<span class="tool" id="item-clock" onclick="activeTool(this)" data-item="clock">
+						<i class="fa fa-clock-o fa-2x"></i>
+					</span>
+				</div>
 				<div class="quiz-index">
 					<span id="current-quiz">1</span> / <span id="total-quiz">15</span>
 				</div>
@@ -123,5 +131,8 @@
 			<p class="text-center font-ice">301 EMPIRE</p>
 		</footer>
 	</div>
+
+	<script src="vendor/jquery-3.3.1.min.js"></script>
+	<script src="js/script.min.js"></script>
 </body>
 </html>

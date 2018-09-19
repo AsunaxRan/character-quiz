@@ -5,21 +5,29 @@ var quiz_list				= [];
 var total_quiz				= 15;
 var current_quiz			= 0;
 var total_point				= 0;
+var current_point			= 0;
 var timer;
 var time_remaining			= 5;
 var quiz_correct_count;
 var combo 					= 0;
 var current_quiz_item;
+var using_star_at			= -1;
+var using_clock_at			= -1;
+var using_magic_at			= -1;
 
 $(window).on('load', function() {
 	$('.preloader').fadeOut('fast');
 });
 
 function reset() {
-	current_quiz = 0;
-	total_point = 0;
-	quiz_correct_count = 0;
-	combo = 0;
+	current_quiz 		= 0;
+	total_point 		= 0;
+	current_point		= 0;
+	quiz_correct_count 	= 0;
+	combo 				= 0;
+	using_star_at		= -1;
+	using_clock_at		= -1;
+	using_magic_at		= -1;
 }
 
 function getData() {
@@ -33,7 +41,6 @@ function getData() {
 function shuffle(data) {
 	var counter = data.length;
 
-    // While there are elements in the array
     while (counter > 0) {
         var index = Math.floor(Math.random() * counter);
         counter--;
@@ -56,10 +63,12 @@ function makeQuiz() {
 			[0, quiz_list[i][3][2]]
 		];
 		shuffle(answers);
+		var mirror = Math.floor(Math.random() * 2);
+		var mirror_class = (mirror == 1) ? 'mirror' : '';
 		var quiz_item = '<div class="quiz-item" data-item="' + i + '">' +
 							'<div class="hidden-character">' +
 								'<div class="img-holder">' +
-									'<img src="' + img_path + quiz_list[i][2] + '" alt="Hidden character" class="img-responsiveY hidden-character-item">' +
+									'<img src="' + img_path + quiz_list[i][2] + '" alt="Hidden character" class="' + mirror_class + ' img-responsiveY hidden-character-item">' +
 								'</div>' +
 							'</div>' +
 							'<div class="answers">' +
@@ -94,6 +103,7 @@ function clean() {
 	$('#total-point').text(total_point);
 	$('#current-quiz').text(current_quiz);
 	$('#total-quiz').text(total_quiz);
+	$('.tool').removeClass('active disabled');
 }
 
 function timing() {
@@ -108,6 +118,11 @@ function timing() {
 	    	$(current_quiz_item).find('.answer').css('pointer-events', 'none');
 	    	$('#music-miss')[0].play();
 	    	combo = 0;
+
+	    	if (using_star_at == current_quiz) {
+				total_point /= 2;
+				counter(current_point, total_point, '#total-point', 500);
+			}
 	    }
 	}, 500);
 }
@@ -125,6 +140,30 @@ function play() {
 	$('#music-bg')[0].volumn = 0.7;
 	$('#music-bg')[0].play();
 	nextQuiz();
+}
+
+function activeTool(tool) {
+	var item = $(tool).data('item');
+	$(tool).addClass('active');
+
+	switch (item) {
+		case 'star':
+			using_star_at = current_quiz + 1;
+			break;
+		case 'magic':
+			using_magic_at = current_quiz;
+			$(current_quiz_item).find('.hidden-character-item').addClass('magic');
+			break;
+		case 'clock':
+			using_clock_at = current_quiz;
+			clearInterval(timer);
+			break;
+	}
+}
+
+function disableTool(tool) {
+	$(tool).removeClass('active');
+	$(tool).addClass('disabled');
 }
 
 function counter(current_point, new_point, target, speed) {
@@ -152,13 +191,23 @@ function check(answer) {
 		combo++;
 		$('.bonus').addClass('show');
 		$('#bonus-combo').text(combo);
-		var current_point = total_point;
-		total_point += time_remaining * 100 * combo;
-		counter(current_point, total_point, '#total-point', 500);
+
+		if (using_star_at != current_quiz) {
+			total_point += time_remaining * 100 * combo;
+		} else {
+			total_point += (time_remaining * 100 * combo) * 2;
+		}
 		$('#music-correct')[0].play();
+		counter(current_point, total_point, '#total-point', 500);
+		
 	} else {
 		$(answer).addClass('incorrect');
 		combo = 0;
+
+		if (using_star_at == current_quiz) {
+			total_point /= 2;
+			counter(current_point, total_point, '#total-point', 500);
+		}
 		$('#music-incorrect')[0].play();
 	}
 }
@@ -166,6 +215,7 @@ function check(answer) {
 function nextQuiz() {
 	$('.bonus').removeClass('show');
 	clearInterval(timer);
+	current_point = total_point;
 
 	if (current_quiz == total_quiz) {
 		endQuiz();
@@ -175,6 +225,16 @@ function nextQuiz() {
 		$('.quiz-item').removeClass('show');
 		$(current_quiz_item).addClass('show');
 		$('#current-quiz').text(current_quiz);
+
+		if (using_clock_at != -1 && using_clock_at < current_quiz) {
+			disableTool('#item-clock');
+		}
+		if (using_magic_at != -1 && using_magic_at < current_quiz) {
+			disableTool('#item-magic');
+		}
+		if (using_star_at != -1 && using_star_at < current_quiz) {
+			disableTool('#item-star');
+		}
 		timing();
 	}
 }
