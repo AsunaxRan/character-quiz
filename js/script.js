@@ -68,8 +68,8 @@ function makeQuiz() {
 		var quiz_item = '<div class="quiz-item" data-item="' + i + '">' +
 							'<div class="hidden-character">' +
 								'<div class="img-holder">' +
-									'<img src="' + img_path + quiz_list[i][2] + '" alt="Hidden character" class="' + 
-										mirror_class + ' lazyload img-responsiveY hidden-character-item">' +
+									'<img data-src="' + img_path + quiz_list[i][2] + '" alt="Hidden character"' +
+										' class="' + mirror_class + ' lazy img-responsiveY hidden-character-item">' +
 								'</div>' +
 							'</div>' +
 							'<div class="answers">' +
@@ -261,6 +261,10 @@ function endQuiz() {
 
 
 getData();
-$(document).ready(function() {
-	$("img.lazyload").lazyload();
+$(function() {
+	$('#play').click(function(event) {
+		$('img.lazy').lazy({
+			'bind': 'event'
+		});
+	});	
 });

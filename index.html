@@ -22,12 +22,12 @@
 	</div>
 
 	<!-- music -->
-	<audio id="music-bg" src="audios/bg.mp3" preload loop></audio>
-	<audio id="music-correct" src="audios/correct.wav" preload></audio>
-	<audio id="music-incorrect" src="audios/incorrect.wav" preload></audio>
-	<audio id="music-end" src="audios/end.wav" preload></audio>
-	<audio id="music-gameover" src="audios/gameover.wav" preload></audio>
-	<audio id="music-miss" src="audios/miss.mp3" preload></audio>
+	<audio id="music-bg" src="audios/bg.mp3" preload="auto" loop></audio>
+	<audio id="music-correct" src="audios/correct.wav" preload="auto"></audio>
+	<audio id="music-incorrect" src="audios/incorrect.wav" preload="auto"></audio>
+	<audio id="music-end" src="audios/end.wav" preload="auto"></audio>
+	<audio id="music-gameover" src="audios/gameover.wav" preload="auto"></audio>
+	<audio id="music-miss" src="audios/miss.mp3" preload="auto"></audio>
 
 	<div class="wrapper">
 		<div class="content">
@@ -133,7 +133,8 @@
 	</div>
 
 	<script src="vendor/jquery-3.3.1.min.js"></script>
-	<script src="vendor/lazyload.min.js"></script>
-	<script src="js/script.min.js"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.10/jquery.lazy.min.js"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.10/jquery.lazy.plugins.min.js"></script>
+	<script src="js/script.js"></script>
 </body>
 </html>
