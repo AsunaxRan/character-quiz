@@ -122,7 +122,7 @@ function play() {
 	clean();
 	makeQuiz();
 	openScreen('#in-process');
-	$('#music-bg')[0].volumn = 0.6;
+	$('#music-bg')[0].volumn = 0.7;
 	$('#music-bg')[0].play();
 	nextQuiz();
 }
