@@ -1,6 +1,6 @@
 "use strict";
 
-var img_path				= "imgs/characters/";
+var img_path				= "imgs/dist/characters/";
 var quiz_list				= [];
 var total_quiz				= 15;
 var current_quiz			= 0;
@@ -68,7 +68,7 @@ function makeQuiz() {
 		var quiz_item = '<div class="quiz-item" data-item="' + i + '">' +
 							'<div class="hidden-character">' +
 								'<div class="img-holder">' +
-									'<img data-src="' + img_path + quiz_list[i][2] + '" alt="Hidden character"' +
+									'<img src="' + img_path + quiz_list[i][2] + '" alt="Hidden character"' +
 										' class="' + mirror_class + ' lazy img-responsiveY hidden-character-item">' +
 								'</div>' +
 							'</div>' +
@@ -261,10 +261,10 @@ function endQuiz() {
 
 
 getData();
-$(function() {
-	$('#play').click(function(event) {
-		$('img.lazy').lazy({
-			'bind': 'event'
-		});
-	});	
-});
+// $(function() {
+// 	$('#play').click(function(event) {
+// 		$('img.lazy').lazy({
+// 			'bind': 'event'
+// 		});
+// 	});	
+// });
